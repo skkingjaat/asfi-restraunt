@@ -21,9 +21,9 @@ export function Navbar() {
     ];
 
     return (
-        <nav className="border-b bg-white shadow-sm sticky top-0 z-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-16">
+        <nav className="border-b w-full fixed top-0 z-50 text-white">
+            <div className="max-w-7xl  mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between items-center py-4">
                     {/* Logo */}
                     <Link href="/" className="shrink-0 font-bold text-2xl text-orange-600 flex items-center gap-2">
                         <span className="text-3xl">🍗</span>
@@ -36,7 +36,7 @@ export function Navbar() {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className="text-gray-700 hover:text-orange-600 font-medium transition-colors"
+                                className=" hover:text-orange-400 font-medium transition-colors"
                             >
                                 {item.label}
                             </Link>
@@ -45,22 +45,22 @@ export function Navbar() {
 
                     {/* Desktop CTA Button */}
                     <div className="hidden md:flex items-center gap-4">
-                        <Button className="bg-orange-600 hover:bg-orange-700">Order Now</Button>
+                        <Button className="p-5 bg-orange-600 hover:bg-orange-700">Order Now</Button>
                     </div>
 
                     {/* Mobile Menu */}
-                    <div className="md:hidden">
+                    <div className="md:hidden ">
                         <Sheet open={isOpen} onOpenChange={setIsOpen}>
                             <SheetTrigger>
-                                <Menu className="h-6 w-6 text-gray-700" />
+                                <Menu className="h-6 w-6 text-white" />
                             </SheetTrigger>
-                            <SheetContent side="right">
+                            <SheetContent className="bg-teal-700 text-white p-5" side="right">
                                 <div className="flex flex-col gap-6 mt-8">
                                     {navItems.map((item) => (
                                         <Link
                                             key={item.href}
                                             href={item.href}
-                                            className="text-gray-700 hover:text-orange-600 font-medium text-lg transition-colors"
+                                            className=" hover:text-orange-600 font-medium text-lg transition-colors"
                                             onClick={() => setIsOpen(false)}
                                         >
                                             {item.label}

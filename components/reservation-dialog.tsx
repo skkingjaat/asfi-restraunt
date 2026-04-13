@@ -59,7 +59,7 @@ export function ReservationDialog() {
       <DialogTrigger className="px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors cursor-pointer">
         Reserve a Table
       </DialogTrigger>
-      <DialogContent className="sm:max-w-106.25">
+      <DialogContent className="sm:max-w-106.25 bg-black text-white">
         <DialogHeader>
           <DialogTitle>Make a Reservation</DialogTitle>
           <DialogDescription>
