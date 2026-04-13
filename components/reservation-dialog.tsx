@@ -61,7 +61,7 @@ export function ReservationDialog() {
       </DialogTrigger>
       <DialogContent className="sm:max-w-106.25 bg-black text-white">
         <DialogHeader>
-          <DialogTitle>Make a Reservation</DialogTitle>
+          <DialogTitle className="text-lg font-semibold">Make a Reservation</DialogTitle>
           <DialogDescription>
             Book your table at Lick A Chick. We'll confirm your reservation shortly.
           </DialogDescription>

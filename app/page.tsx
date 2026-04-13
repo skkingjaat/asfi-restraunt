@@ -4,7 +4,6 @@ import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import Image from "next/image";
 import { Star, Clock, MapPin, Phone, Flame, Award, Zap, Heart } from "lucide-react";
-import { ReservationDialog } from "@/components/reservation-dialog";
 
 export default function Home() {
   const featuredDishes = [
@@ -89,8 +88,8 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-teal-700">
       {/* Hero Section */}
-      <section className="relative h-full min-h-screen md:max-h-screen flex items-center overflow-hidden text-white">
-        <div className="absolute z-10 max-w-3xl py-10 px-4 sm:px-6 lg:px-8">
+      <section className="relative h-240 sm:h-full min-h-screen  md:max-h-screen flex items-center overflow-hidden text-white">
+        <div className="absolute z-10 max-w-6xl py-20 px-4 sm:px-6 md:px-32">
           <Badge className="mb-4 bg-orange-200 text-orange-900">Est. 2020</Badge>
           <h1 className="text-6xl font-bold mb-6 leading-tight">
             Crispy, Delicious Chicken
@@ -99,14 +98,11 @@ export default function Home() {
             Experience authentic fried chicken prepared with love and the finest ingredients.
             A local favorite serving our community with passion.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/menu">
               <Button className=" px-6 py-6 bg-white text-black hover:bg-orange-50">
                 View Menu
               </Button>
             </Link>
-            <ReservationDialog />
-          </div>
           <div className="mt-8 pt-8 border-t border-orange-400">
             <p className="text-sm font-semibold mb-4 text-orange-100">ORDER ONLINE NOW</p>
             <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
@@ -136,12 +132,12 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full h-full z-0">
-          <Image className="w-full h-full brightness-50 object-cover min-h-screen sm:max-h-screen object-center" src="/hero-bg-image.jpg" alt="" width={400} height={300}></Image>
+          <Image className="w-full h-full brightness-50 object-cover min-h-screen sm:max-h-screen object-center" src="/hero-bg-image.jpg" alt="" width={400} height={600}></Image>
         </div>
       </section>
 
       {/* Featured Dishes */}
-      <section className="py-20 bg-teal-700 text-white">
+      <section className="py-20 bg-teal-700 text-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Badge className="mb-4">OUR SPECIALTIES</Badge>
@@ -261,7 +257,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-teal-700 text-white">
+      <section className="py-20 bg-teal-700 text-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Badge className="mb-4">TESTIMONIALS</Badge>
@@ -304,7 +300,7 @@ export default function Home() {
           </div>
 
           {/* Three Option Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Order Online Card */}
             <Link href="/menu">
               <Card className="h-full border-2 border-orange-200 hover:border-orange-600 shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer transform hover:scale-105 bg-white">
@@ -332,27 +328,7 @@ export default function Home() {
               </Card>
             </Link>
 
-            {/* Make Reservation Card */}
-            <Card className="h-full border-2 border-red-200 hover:border-red-600 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 bg-white">
-              <CardHeader className="text-center pb-4">
-                <div className="flex justify-center mb-4">
-                  <div className="bg-linear-to-br from-red-400 to-red-600 p-4 rounded-full shadow-lg">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zm-5-5H7v5h7v-5z" />
-                    </svg>
-                  </div>
-                </div>
-                <CardTitle className="text-2xl text-gray-900">Make a Reservation</CardTitle>
-                <CardDescription className="text-base text-gray-600 mt-2">
-                  Book your table in advance for the best experience
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="w-full text-center">
-                  <ReservationDialog />
-                </div>
-              </CardContent>
-            </Card>
+            
 
             {/* Contact Us Card */}
             <Link href="/contact">
