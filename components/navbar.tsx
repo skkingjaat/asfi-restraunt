@@ -66,9 +66,9 @@ export function Navbar() {
                                             {item.label}
                                         </Link>
                                     ))}
-                                    <Button className="w-full bg-orange-600 hover:bg-orange-700">
+                                    <Link href="tel:1234567890" className="px-5 py-2 rounded-md bg-orange-600 hover:bg-orange-700">
                                         Order Now
-                                    </Button>
+                                    </Link>
                                 </div>
                             </SheetContent>
                         </Sheet>
