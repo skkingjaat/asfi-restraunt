@@ -8,9 +8,9 @@ export const metadata = {
 
 export default function MenuPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-linear-to-r from-orange-600 to-red-600 text-white py-16">
+      <section className="py-40 bg-linear-to-r from-teal-700 to-teal-600 text-white ">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <Badge className="mb-4 bg-orange-200 text-orange-900">FULL MENU</Badge>
@@ -23,14 +23,14 @@ export default function MenuPage() {
       </section>
 
       {/* Menu Content */}
-      <section className="py-16">
+      <section className="py-16 bg-teal-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <MenuTabs />
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="bg-linear-to-r from-orange-600 to-red-600 text-white py-16">
+      <section className="bg-linear-to-r from-teal-700 to-teal-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Order?</h2>
           <p className="text-xl text-orange-100 mb-6">

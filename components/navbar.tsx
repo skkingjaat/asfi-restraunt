@@ -45,7 +45,7 @@ export function Navbar() {
 
                     {/* Desktop CTA Button */}
                     <div className="hidden md:flex items-center gap-4">
-                        <Button className="p-5 bg-orange-600 hover:bg-orange-700">Order Now</Button>
+                        <Link href="tel:1234567890" className="px-5 py-2 rounded-md bg-orange-600 hover:bg-orange-700">Order Now</Link>
                     </div>
 
                     {/* Mobile Menu */}

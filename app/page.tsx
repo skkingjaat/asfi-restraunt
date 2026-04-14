@@ -132,7 +132,7 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full h-full z-0">
-          <Image className="w-full h-full brightness-50 object-cover min-h-screen sm:max-h-screen object-center" src="/hero-bg-image.jpg" alt="" width={400} height={600}></Image>
+          <Image loading="eager" className="w-full h-full brightness-50 object-cover min-h-screen sm:max-h-screen object-center" src="/hero-bg-image.jpg" alt="" width={400} height={600}></Image>
         </div>
       </section>
 
@@ -154,7 +154,7 @@ export default function Home() {
               >
                 <CardHeader>
                   <div className="w-full h-60">
-                    <Image className="w-full h-full object-cover rounded" src={dish.src} alt={dish.alt} width={200} height={200}></Image>
+                    <Image loading="eager" className="w-full h-full object-cover rounded" src={dish.src} alt={dish.alt} width={200} height={200}></Image>
                   </div>
                   <div className="flex items-start justify-between mt-4">
                     <CardTitle className="text-lg font-semibold">{dish.name}</CardTitle>
@@ -163,12 +163,8 @@ export default function Home() {
                   <CardDescription>{dish.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex items-center justify-between">
-                    <span className="text-3xl font-bold text-orange-600">{dish.price}</span>
-                    <Button size="sm" className="bg-orange-600 hover:bg-orange-700">
-                      Order
-                    </Button>
-                  </div>
+                    <span className="text-3xl font-bold text-orange-400">{dish.price}</span>
+                    
                 </CardContent>
               </Card>
             ))}
